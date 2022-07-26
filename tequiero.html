@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hola</title>
+    <link rel="stylesheet" href="./js/carta.css">
+</head>
+<style>
+  
+    .heart {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    }
+
+    .heart:before,
+    .heart:after {
+    position: absolute;
+    content: "";
+    left: 18px;
+    top: 0px;
+    width: 18px;
+    height: 30px;
+    background: #E72650;
+    border-radius: 30px 30px 0 0;
+    transform: rotate(-45deg);
+    transform-origin: 0 100%;
+    }
+
+    .heart:after {
+    left: 0;
+    transform: rotate(45deg);
+    transform-origin :100% 100%;
+    }
+
+    .one {
+    transform: scale(0.8);
+    opacity: 0.6;
+    animation: up 15s linear infinite, side 6s ease-in-out infinite alternate;
+    }
+
+    .two {
+    transform: scale(0.6);
+    opacity: 0.9;
+    animation: up 25s linear infinite, side 5s ease-in-out infinite alternate;
+    }
+
+    .three {
+    transform: scale(0.8);
+    opacity: 0.8;
+    animation: up 20s linear infinite, side 4s ease-in-out infinite alternate;
+    }
+
+    .four {
+    transform: scale(0.7);
+    opacity: 0.9;
+    animation: up 18s linear infinite, side 2s ease-in-out infinite alternate;
+    }
+
+    .five {
+    transform: scale(0.6);
+    opacity: 0.3; 
+    animation: up 7s linear infinite, side 1s ease-in-out infinite alternate;
+    }
+
+    .six {
+    opacity: 0.8; 
+    animation: up 10s linear infinite, side 7s ease-in-out infinite alternate;
+    }
+
+    @keyframes up {     
+    0% { 
+        top: 300px;
+    }
+    100% { 
+        top: -500px;
+    }
+    }
+
+
+    @keyframes side {
+    0% {
+        margin-left: 0px;
+    }
+    100% {
+        margin-left: 50px;
+    }
+    }
+
+</style>
+<body>
+    <canvas id="c"></canvas>
+    <div class="container">
+
+        <div class="envelope"></div>
+
+        <div class="card">
+
+            <h1>HOLA NIÑA BONITA</h1>
+            <p>Esta es una carta para tí, bueno creí que sería bonito esto, espero que te guste.</p>
+            <p>Quiero recordarte que, a pesar de estar distanciados ahora, siempre estaras presente en mi mente, te quiero.</p>
+            <p>Disculpa si la carta te llega un poco arrugala.</p>
+
+            <div class="imagen_div">
+              
+                <img src="https://static.vecteezy.com/system/resources/previews/001/187/951/non_2x/love-doodle-couple-png.png" alt="">
+                <hr>
+            </div>
+
+           
+            
+        </div>
+        
+        <div class="cover"></div>
+        <div class="lid"></div>
+
+        <div class="musica">
+            
+            <audio controls="" autoplay="autoplay" preload="none" loop>
+                <source src="js/audio.mp3" type="audio/mp3">
+            </audio>
+
+        </div>
+        
+    </div>
+
+        <div class='heart one'></div>
+        <div class='heart two'></div>
+        <div class='heart three'></div>
+        <div class='heart four'></div>
+        <div class='heart five'></div>
+        <div class='heart six'></div>
+
+
+        
+    
+</body>
+</html>
